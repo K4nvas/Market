@@ -12,8 +12,7 @@ namespace K4nvas.Market.Common.Infraestructure
         public const string RibbonRegion = "RibbonRegion";
         public const string LogonRegion = "LogonRegion";
         public const string SecondaryRegion = "SecondaryRegion";
+        public const string FlyoutRegion = "FlyoutRegion";
         public const string ThirdRegion = "ThirdRegion";
-        public const string PrimaryMenu = "PrimaryMenu";
-        public const string FourthRegion = "FourthRegion";
     }
 }

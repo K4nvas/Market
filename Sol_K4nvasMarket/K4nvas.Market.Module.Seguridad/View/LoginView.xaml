@@ -4,9 +4,143 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:K4nvas.Market.Module.Seguridad.View"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
+             mc:Ignorable="d" >
+    <Grid x:Name="MainGrid">
+        <Grid.Background>
+            <ImageBrush  Stretch="Fill" AlignmentX="Right" AlignmentY="Bottom"  />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Background="#90000000" Grid.RowSpan="4" Grid.ColumnSpan="5">
+            <Border BorderBrush="Black" BorderThickness="0" Background="Transparent" CornerRadius="0" VerticalAlignment="Center" HorizontalAlignment="Center" Height="350" Width="586">
+                <Border.BitmapEffect>
+                    <DropShadowBitmapEffect Color="Black" Opacity="0.5" Direction="270" ShadowDepth="0.7" />
+                </Border.BitmapEffect>
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border Background="#f8f8f8" Grid.Row="1" Grid.RowSpan="5" Grid.ColumnSpan="6" CornerRadius="0" Panel.ZIndex="0" BorderBrush="Orange" BorderThickness="2"></Border>
+
+                    <Image  Grid.RowSpan="2"  Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="top"/>
+
+
+                    <Button Cursor="Hand" Command="{Binding CloseAppCommand}" x:Name="btnButton" Height="20" Width="20" VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Column="5">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border x:Name="Border">
+                                                <ContentPresenter Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+
+
+                    <TextBlock x:Name="lblsd" HorizontalAlignment="Center" Text="AZALEIA" Foreground="White" Grid.ColumnSpan="6" FontSize="40" Margin="0,-95,0,0" FontFamily="Segoe UI"/>
+                    <TextBlock x:Name="lblsd2" HorizontalAlignment="Center" Text="ERP Azaleia" Foreground="White" Grid.ColumnSpan="6" FontSize="20" Margin="0,-35,0,0" FontFamily="Segoe UI"/>
+
+                    <Border Background="#ccc" CornerRadius="20" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4" Grid.RowSpan="2">
+                        <Border CornerRadius="15" Margin="2">
+                            <Grid Margin="2" Background="Transparent">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Border Background="Orange" Grid.RowSpan="3" CornerRadius="15,0,0,15"></Border>
+
+
+                                <TextBlock x:Name="lblUsuario" Padding="0,0,10,0"  Foreground="#f2f2f2" Text="Usuario :" FontSize="16" FontFamily="Segoe UI" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+                                <TextBox CharacterCasing="Upper" Margin="10,0" Style="{x:Null}" 
+                                         Background="Transparent" BorderThickness="0" 
+                                         Foreground="#000" Grid.Column="1" FontFamily="Segoe UI" FontSize="16" AcceptsTab="False" TabIndex="1" Name="txtUser" Text="{Binding Nombres}"  VerticalAlignment="Center">
+
+                                    <TextBox.InputBindings>
+                                        <KeyBinding Key="Enter" Command="{Binding LoginCommand}" />
+                                    </TextBox.InputBindings>
+
+                                </TextBox>
+                                <!--<TextBox.InputBindings>
+                            <KeyBinding Command = "{Binding CmdLimpiarError }"/>
+                        </TextBox.InputBindings>
+                    </TextBox>-->
+
+                                <Separator Grid.ColumnSpan="2" Grid.Row="1" Background="#ccc" />
+
+                                <TextBlock x:Name="lblPassword"  Padding="0,0,10,0"  HorizontalAlignment="Right" Foreground="White"   Text="Contraseña :" Grid.Row="2" FontFamily="Segoe UI" FontSize="15" VerticalAlignment="Center" />
+                                <PasswordBox Style="{x:Null}" Foreground="#000"  Margin="10,0" FontFamily="Segoe UI"  
+                                             FontSize="20" x:Name="Clave" 
+                                             VerticalAlignment="Center" Height="25" 
+                                             BorderBrush="Transparent" BorderThickness="0" Grid.Column="1" 
+                                             Grid.Row="2" Background="Transparent" TabIndex="2"
+                                             KeyUp="Clave_KeyUp" GotFocus="Clave_GotFocus" LostFocus="Clave_LostFocus">
+                                    <PasswordBox.InputBindings>
+                                        <KeyBinding Key="Enter" Command="{Binding LoginCommand}" />
+                                    </PasswordBox.InputBindings>
+                                </PasswordBox>
+                            </Grid>
+                        </Border>
+                    </Border>
+
+                    <TextBlock x:Name="ErrorMsg" TextWrapping="Wrap" Text="{Binding Error, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"  Foreground="Red" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="4" FontFamily="Segoe UI" FontSize="13" HorizontalAlignment="Center" />
+                    <UniformGrid Grid.Row="1" Columns="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"></UniformGrid>
+
+                    <Border Grid.ColumnSpan="6" Grid.Row="5" CornerRadius="0" Background="#333" BorderBrush="#333" BorderThickness="1" Margin="2" >
+                        <Button x:Name="btnIngresar" FontFamily="Segoe UI" Command="{Binding LoginCommand}" Foreground="White" BorderThickness="0" BorderBrush="Transparent" FontWeight="DemiBold" FontSize="14" Background="Transparent">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="INGRESAR "></TextBlock>
+                                <Rectangle Width="15" Height="15" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Fill" Visual="{DynamicResource appbar_arrow_right}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                            </StackPanel>
+                        </Button>
+                    </Border>
+
+                </Grid>
+
+            </Border>
+
+        </Border>
+
+
     </Grid>
 </UserControl>

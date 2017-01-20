@@ -115,6 +115,16 @@
   <ItemGroup>
     <Resource Include="Resources\Images\inicio_market.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\K4nvas.Market.Common\K4nvas.Market.Common.csproj">
+      <Project>{862fbc04-5204-409c-b032-45e1e24bfef4}</Project>
+      <Name>K4nvas.Market.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\K4nvas.Market.Module.Seguridad\K4nvas.Market.Module.Seguridad.csproj">
+      <Project>{9f33dd74-e564-449a-8ff7-bcfbdaa16181}</Project>
+      <Name>K4nvas.Market.Module.Seguridad</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

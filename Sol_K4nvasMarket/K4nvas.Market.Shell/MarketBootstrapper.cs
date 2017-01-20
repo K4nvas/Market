@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
+using K4nvas.Market.Module.Seguridad;
 
 namespace K4nvas.Market.Shell
 {
@@ -16,7 +17,7 @@ namespace K4nvas.Market.Shell
     {
         protected override void ConfigureAggregateCatalog()
         {
-            base.ConfigureAggregateCatalog();
+            this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(SeguridadModule).Assembly));
         }
 
         protected override void InitializeShell()

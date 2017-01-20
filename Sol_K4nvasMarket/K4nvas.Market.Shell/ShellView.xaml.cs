@@ -1,4 +1,5 @@
-﻿using MahApps.Metro.Controls;
+﻿using K4nvas.Market.Module.Seguridad.ViewModel.Interface;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
@@ -23,6 +24,31 @@ namespace K4nvas.Market.Shell
         public ShellView()
         {
             InitializeComponent();
+        }
+
+        [Import]
+        public ILoginViewModel ViewModel
+        {
+            get { return this.DataContext as ILoginViewModel; }
+            set
+            {
+
+                this.DataContext = value;
+            }
+        }
+
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            ////this.Close();
+            //this.Hide();
+            //var user = (Komatsu.Core.Seguridad.ServicioUsuario.Usuario)System.Windows.Application.Current.Resources["UsuarioLogeado"];
+
+            //MyHub.collectionGroup = new List<String>();
+
+            //CRPChavinBootstrapper bootstrapper = new CRPChavinBootstrapper();
+            //bootstrapper.Run();
+            //MyNotifyIcon.Dispose();
+
         }
     }
 }

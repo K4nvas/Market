@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace K4nvas.Market.Module.Seguridad.ViewModel.Interface
 {
-    interface ILoginViewModel
+    public interface ILoginViewModel
     {
     }
 }
