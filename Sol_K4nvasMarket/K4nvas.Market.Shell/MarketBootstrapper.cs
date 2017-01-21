@@ -10,6 +10,7 @@ using System.Windows.Controls;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using K4nvas.Market.Module.Seguridad;
+using K4nvas.Market.Shell.Helper;
 
 namespace K4nvas.Market.Shell
 {
@@ -22,7 +23,8 @@ namespace K4nvas.Market.Shell
 
         protected override void InitializeShell()
         {
-            base.InitializeShell();
+            App.Current.MainWindow = this.Shell as Window;
+            App.Current.MainWindow.Show();
         }
 
         protected override DependencyObject CreateShell()
@@ -33,7 +35,7 @@ namespace K4nvas.Market.Shell
         protected override RegionAdapterMappings ConfigureRegionAdapterMappings()
         {
             var mappings = base.ConfigureRegionAdapterMappings();
-            //mappings.RegisterMapping(typeof(Grid), this.Container.GetExportedValue<RibbonRegionAdapter>());
+            mappings.RegisterMapping(typeof(Grid), this.Container.GetExportedValue<RibbonRegionAdapter>());
 
             //mappings.RegisterMapping(typeof(DevExpress.Xpf.Grid.GridControl), this.Container.GetExportedValue<RibbonRegionAdapter>());
             //mappings.RegisterMapping(typeof(Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter), this.Container.GetExportedValue<RibbonRegionAdapter>());

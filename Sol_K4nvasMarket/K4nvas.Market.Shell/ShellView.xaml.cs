@@ -40,13 +40,13 @@ namespace K4nvas.Market.Shell
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
             ////this.Close();
-            //this.Hide();
+            this.Hide();
             //var user = (Komatsu.Core.Seguridad.ServicioUsuario.Usuario)System.Windows.Application.Current.Resources["UsuarioLogeado"];
 
             //MyHub.collectionGroup = new List<String>();
 
-            //CRPChavinBootstrapper bootstrapper = new CRPChavinBootstrapper();
-            //bootstrapper.Run();
+            MarketBootstrapper MarketBootstrapper = new MarketBootstrapper();
+            MarketBootstrapper.Run();
             //MyNotifyIcon.Dispose();
 
         }
