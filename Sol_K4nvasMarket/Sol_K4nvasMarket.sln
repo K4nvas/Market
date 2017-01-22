@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{7B83CC41-02F3-4530-9B5D-8DCFF6C6A4D5}"
 EndProject
@@ -59,9 +59,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Libraries", "4. Librarie
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K4nvas.Libraries", "K4nvas.Libraries", "{365217F9-8B04-4F88-9660-E030A0D272F5}"
 	ProjectSection(SolutionItems) = preProject
+		K4nvas.Libraries\Fluent.dll = K4nvas.Libraries\Fluent.dll
 		K4nvas.Libraries\MahApps.Metro.dll = K4nvas.Libraries\MahApps.Metro.dll
+		K4nvas.Libraries\Microsoft.Expression.Interactions.dll = K4nvas.Libraries\Microsoft.Expression.Interactions.dll
+		K4nvas.Libraries\Microsoft.Practices.Prism.Composition.dll = K4nvas.Libraries\Microsoft.Practices.Prism.Composition.dll
 		K4nvas.Libraries\Microsoft.Practices.Prism.dll = K4nvas.Libraries\Microsoft.Practices.Prism.dll
+		K4nvas.Libraries\Microsoft.Practices.Prism.Interactivity.dll = K4nvas.Libraries\Microsoft.Practices.Prism.Interactivity.dll
 		K4nvas.Libraries\Microsoft.Practices.Prism.MefExtensions.dll = K4nvas.Libraries\Microsoft.Practices.Prism.MefExtensions.dll
+		K4nvas.Libraries\Microsoft.Practices.Prism.Mvvm.Desktop.dll = K4nvas.Libraries\Microsoft.Practices.Prism.Mvvm.Desktop.dll
+		K4nvas.Libraries\Microsoft.Practices.Prism.Mvvm.dll = K4nvas.Libraries\Microsoft.Practices.Prism.Mvvm.dll
+		K4nvas.Libraries\Microsoft.Practices.Prism.PubSubEvents.dll = K4nvas.Libraries\Microsoft.Practices.Prism.PubSubEvents.dll
+		K4nvas.Libraries\Microsoft.Practices.Prism.SharedInterfaces.dll = K4nvas.Libraries\Microsoft.Practices.Prism.SharedInterfaces.dll
 		K4nvas.Libraries\Microsoft.Practices.ServiceLocation.dll = K4nvas.Libraries\Microsoft.Practices.ServiceLocation.dll
 		K4nvas.Libraries\Microsoft.Practices.Unity.Configuration.dll = K4nvas.Libraries\Microsoft.Practices.Unity.Configuration.dll
 		K4nvas.Libraries\Microsoft.Practices.Unity.dll = K4nvas.Libraries\Microsoft.Practices.Unity.dll
