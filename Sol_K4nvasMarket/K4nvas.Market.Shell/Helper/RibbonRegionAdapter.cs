@@ -1,16 +1,16 @@
-﻿using Microsoft.Practices.Prism.Regions;
-using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
+﻿using System.Collections.Specialized;
 using System.ComponentModel.Composition;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using Microsoft.Practices.Prism.Regions;
+using Fluent;
 
 namespace K4nvas.Market.Shell.Helper
 {
+    /// <summary>
+    /// Enables use of a Ribbon control as a Prism region.
+    /// </summary>
+    /// <remarks> See Developer's Guide to Microsoft Prism (Ver. 4), p. 189.</remarks>
     [Export]
     public class RibbonRegionAdapter : RegionAdapterBase<Grid>
     {
@@ -60,8 +60,5 @@ namespace K4nvas.Market.Shell.Helper
         {
             return new SingleActiveRegion();
         }
-
-
-
     }
 }

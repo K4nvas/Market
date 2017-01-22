@@ -36,9 +36,6 @@ namespace K4nvas.Market.Shell
         {
             var mappings = base.ConfigureRegionAdapterMappings();
             mappings.RegisterMapping(typeof(Grid), this.Container.GetExportedValue<RibbonRegionAdapter>());
-
-            //mappings.RegisterMapping(typeof(DevExpress.Xpf.Grid.GridControl), this.Container.GetExportedValue<RibbonRegionAdapter>());
-            //mappings.RegisterMapping(typeof(Microsoft.Practices.EnterpriseLibrary.Logging.LogWriter), this.Container.GetExportedValue<RibbonRegionAdapter>());
             return mappings;
         }
 
