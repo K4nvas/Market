@@ -23,8 +23,6 @@ namespace K4nvas.Market.Module.Seguridad.View
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public partial class LoginView : UserControl, ILoginView
     {
-        Computer oComputer = new Computer();
-
         public LoginView()
         {
             InitializeComponent();
@@ -45,7 +43,7 @@ namespace K4nvas.Market.Module.Seguridad.View
 
         private void Log_Loaded(object sender, RoutedEventArgs e)
         {
-            //txtUser.Focus();
+            txt_Usuario.Focus();
         }
 
 
