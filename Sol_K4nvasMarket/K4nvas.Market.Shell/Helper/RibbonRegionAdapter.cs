@@ -3,7 +3,6 @@ using System.ComponentModel.Composition;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Practices.Prism.Regions;
-using Fluent;
 
 namespace K4nvas.Market.Shell.Helper
 {

@@ -21,7 +21,7 @@ namespace K4nvas.Market.Module.Seguridad.View
 {
     [Export(typeof(ILoginView))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    public partial class LoginView : UserControl
+    public partial class LoginView : UserControl, ILoginView
     {
         Computer oComputer = new Computer();
 
@@ -38,41 +38,17 @@ namespace K4nvas.Market.Module.Seguridad.View
             set { this.DataContext = value; }
         }
 
-        private void Clave_KeyUp(object sender, KeyEventArgs e)
+        private void btnIngresar_Click(object sender, RoutedEventArgs e)
         {
-            if (e.Key == Key.CapsLock)
-            {
-                if (oComputer.Keyboard.CapsLock)
-                {
-                    ErrorMsg.Text = "Bloq Mayús Activado!";
-                }
-                else
-                {
-                    ErrorMsg.Text = string.Empty;
-                }
-            }
+
         }
 
-        private void Clave_GotFocus(object sender, RoutedEventArgs e)
+        private void Log_Loaded(object sender, RoutedEventArgs e)
         {
-            if (oComputer.Keyboard.CapsLock)
-            {
-                ErrorMsg.Text = "Bloq Mayús Activado!";
-            }
-            else
-            {
-                ErrorMsg.Text = string.Empty;
-            }
+            //txtUser.Focus();
         }
 
-        private void Clave_LostFocus(object sender, RoutedEventArgs e)
-        {
-            ErrorMsg.Text = string.Empty;
-        }
 
-        private void ucLogin_Loaded(object sender, RoutedEventArgs e)
-        {
-            txtUser.Focus();
-        }
+
     }
 }

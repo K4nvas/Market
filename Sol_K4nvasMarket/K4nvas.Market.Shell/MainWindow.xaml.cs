@@ -1,7 +1,5 @@
-﻿using MahApps.Metro.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,8 +18,7 @@ namespace K4nvas.Market.Shell
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    [Export(typeof(IShellView))]
-    public partial class MainWindow : MetroWindow, IShellView
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
