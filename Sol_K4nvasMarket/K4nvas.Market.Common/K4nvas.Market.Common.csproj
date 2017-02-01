@@ -71,6 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\PasswordBoxAssistant.cs" />
+    <Compile Include="Helpers\ViewActivator.cs" />
+    <Compile Include="Helpers\ViewActivator\IViewActivator.cs" />
+    <Compile Include="Helpers\ViewActivator\RibbonActivator.cs" />
     <Compile Include="Infraestructure\RegionNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
