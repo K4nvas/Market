@@ -8,7 +8,7 @@
              xmlns:Common="clr-namespace:K4nvas.Market.Common.Helpers;assembly=K4nvas.Market.Common">
     <Grid x:Name="MainGrid">
         <Grid.Background>
-            <ImageBrush  Stretch="Fill" AlignmentX="Right" AlignmentY="Bottom" ImageSource="/Resources/Images/market.jpg" />
+            <ImageBrush  Stretch="Fill" AlignmentX="Right" AlignmentY="Bottom" ImageSource="\Resources\Images\market.jpg" />
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>

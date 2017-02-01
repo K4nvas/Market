@@ -13,6 +13,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.ComponentModel.Composition;
 using K4nvas.Market.Shell.Helper;
+using K4nvas.Market.Ventas;
 
 namespace K4nvas.Market.Shell
 {
@@ -28,6 +29,7 @@ namespace K4nvas.Market.Shell
             base.ConfigureAggregateCatalog();
             this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ShellView).Assembly));
             this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(SeguridadModule).Assembly));
+            this.AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(VentasModule).Assembly));
         }
 
         protected override void InitializeShell()

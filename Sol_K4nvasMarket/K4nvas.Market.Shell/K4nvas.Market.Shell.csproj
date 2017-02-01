@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Fluent">
       <HintPath>..\K4nvas.Libraries\Fluent.dll</HintPath>
@@ -114,6 +117,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,6 +131,7 @@
   <ItemGroup>
     <Resource Include="Resources\Entypo-license.txt" />
     <Resource Include="Resources\icon.jpg" />
+    <Resource Include="Resources\Images\Shopping Cart_40px.png" />
     <Resource Include="Resources\WindowsIcons-license.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +160,10 @@
       <Project>{9f33dd74-e564-449a-8ff7-bcfbdaa16181}</Project>
       <Name>K4nvas.Market.Module.Seguridad</Name>
     </ProjectReference>
+    <ProjectReference Include="..\K4nvas.Market.Ventas\K4nvas.Market.Ventas.csproj">
+      <Project>{93AFE21C-D7DF-4C86-A8FB-4D9E2ACAA193}</Project>
+      <Name>K4nvas.Market.Ventas</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Icons\Small Business_48px.png" />
@@ -163,7 +172,13 @@
     <Resource Include="Resources\Images\market.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Images\sesion.png" />
+    <Resource Include="Resources\Images\Product_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Cardboard Box_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Statistics_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

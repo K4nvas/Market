@@ -76,6 +76,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -124,6 +125,10 @@
     <ProjectReference Include="..\K4nvas.Market.Common\K4nvas.Market.Common.csproj">
       <Project>{862fbc04-5204-409c-b032-45e1e24bfef4}</Project>
       <Name>K4nvas.Market.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\K4nvas.Market.Ventas\K4nvas.Market.Ventas.csproj">
+      <Project>{93afe21c-d7df-4c86-a8fb-4d9e2acaa193}</Project>
+      <Name>K4nvas.Market.Ventas</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

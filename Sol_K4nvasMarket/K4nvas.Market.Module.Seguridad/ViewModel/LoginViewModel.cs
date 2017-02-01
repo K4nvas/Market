@@ -64,7 +64,7 @@ namespace K4nvas.Market.Module.Seguridad.ViewModel
 
         #region Métodos
 
-        private async void LoginCommand()
+        private void LoginCommand()
         {
             //if(string.IsNullOrEmpty(Usuario) || string.IsNullOrEmpty(Contrasenia))
             //{
