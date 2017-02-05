@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>  
+<CodeSnippets  
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippet Format="1.0.0">  
+        <Header>  
+          <Title>Hello World VB</Title>  
+          <Author>Myself</Author>  
+          <Description>Says Hello to the world.</Description>  
+          <Shortcut>hello</Shortcut>  
+        </Header>
+        <Snippet>
+          <References>  
+            <Reference>  
+              <Assembly>System.ComponentModel.Composition</Assembly>  
+            </Reference>   
+          </References>  
+          <Imports>
+            <Import>
+              <Namespace>System.ComponentModel.Composition</Namespace>
+            </Import>
+          </Imports>
+          <Declarations>  
+            <Literal>  
+              <ID>InterfazVista</ID>  
+              <ToolTip>Interfaz de la Vista.</ToolTip>  
+              <Default>"InterfazVista"</Default>  
+            </Literal>  
+          </Declarations>  
+            <Code Language="CSharp">  
+                <![CDATA[[Export(typeof($InterfazVista$))]]]>  
+            </Code>  
+        </Snippet>  
+    </CodeSnippet>  
+</CodeSnippets>  

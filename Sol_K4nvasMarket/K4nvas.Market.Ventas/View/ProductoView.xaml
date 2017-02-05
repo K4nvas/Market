@@ -25,7 +25,6 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Background="White" Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal">
-
                 <Button x:Name="btn_Producto" Height="40" Width="40" Foreground="{DynamicResource AccentColorBrush}" Style="{DynamicResource MetroCircleButtonStyle}"  Command="{Binding CommandAbrirFlyoutTest}">
                     <Rectangle Width="15" Height="10" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                         <Rectangle.OpacityMask>
@@ -77,7 +76,7 @@
                     <ColumnDefinition Width="auto" />
                     <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="2" HorizontalAlignment="Right" Command="{Binding CommandBuscarSerie}" Margin="2"   >
+                <Button Grid.Column="2" HorizontalAlignment="Right" Command="{Binding CommandBuscarSerie}" >
                     <StackPanel Orientation="Horizontal">
                         <Rectangle Width="15" Height="15" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                             <Rectangle.OpacityMask>
@@ -87,36 +86,28 @@
                         <TextBlock Text=" Buscar"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button Foreground="{DynamicResource AccentColorBrush}"  Grid.Column="0"  Command="{Binding CommandAbrirPopupRegistrarSerie}"   Margin="2" HorizontalAlignment="Left">
+                
+                <Button Grid.Column="0"  Command="{Binding CommandAbrirPopupRegistrarSerie}">
                     <StackPanel Orientation="Horizontal">
-                        <Rectangle Width="15"
-                               Height="15"
-                               Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
+                        <Rectangle Width="15" Height="15" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                             <Rectangle.OpacityMask>
-                                <VisualBrush Stretch="Fill"
-                                         Visual="{DynamicResource appbar_page_add}" />
+                                <VisualBrush Stretch="Fill" Visual="{DynamicResource appbar_page_add}" />
                             </Rectangle.OpacityMask>
-
                         </Rectangle>
                         <TextBlock Text=" Nuevo"></TextBlock>
                     </StackPanel>
                 </Button>
 
-                <Button Command="{Binding CommandLimpiarSerie}" Grid.Column="1"  Margin="2" HorizontalAlignment="Right">
+                <Button Command="{Binding CommandLimpiarSerie}" Grid.Column="1">
                     <StackPanel Orientation="Horizontal">
-                        <Rectangle Width="15"
-                               Height="15"
-                               Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
+                        <Rectangle Width="15" Height="15" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                             <Rectangle.OpacityMask>
-                                <VisualBrush Stretch="Fill"
-                                         Visual="{DynamicResource appbar_draw_brush_reflection}" />
+                                <VisualBrush Stretch="Fill" Visual="{DynamicResource appbar_draw_brush_reflection}" />
                             </Rectangle.OpacityMask>
 
                         </Rectangle>
                         <TextBlock Text=" Limpiar"></TextBlock>
                     </StackPanel>
-
-
 
                 </Button>
 
@@ -202,21 +193,18 @@
                                     </Style>
                                 </DataGridTextColumn.ElementStyle>
                             </DataGridTextColumn>
-
-
-
                         </DataGrid.Columns>
                     </DataGrid>
 
                     <Grid  Grid.Row="1" Grid.ColumnSpan="2" Background="White">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
                             <ColumnDefinition Width="AUTO"></ColumnDefinition>
                             <ColumnDefinition Width="AUTO"></ColumnDefinition>
                             <ColumnDefinition Width="AUTO"></ColumnDefinition>
                             <ColumnDefinition Width="AUTO"></ColumnDefinition>
                             <ColumnDefinition Width="AUTO"></ColumnDefinition>
-                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="1*"></RowDefinition>
@@ -276,8 +264,7 @@
 
         </Grid>
 
-        <!--<Serie:RegistrarSerieView x:Name="Slider"  DataContext="{Binding}" ></Serie:RegistrarSerieView>-->
-        <Flyout:FlyoutTestView DataContext="{Binding FlyoutTestViewModel}"></Flyout:FlyoutTestView>
+        <!--<Flyout:FlyoutTestView DataContext="{Binding FlyoutTestViewModel}"></Flyout:FlyoutTestView>-->
 
     </Grid>
 </UserControl>

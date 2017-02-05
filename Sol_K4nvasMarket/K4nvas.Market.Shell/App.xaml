@@ -19,8 +19,28 @@
             </ResourceDictionary.MergedDictionaries>
 
             <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MetroButton }">
-                <Setter Property="Foreground" Value="{DynamicResource AccentColorBrush}" />
+                <Setter Property="Background" Value="{DynamicResource AccentColorBrush}" />
+                <Setter Property="Margin" Value="2"/>
+                <Setter Property="Foreground" Value="White"></Setter>
             </Style>
+
+            <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}">
+                <Setter Property="Margin" Value="2"></Setter>
+            </Style>
+
+            <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MetroComboBox}">
+                <Setter Property="Margin" Value="2"></Setter>
+            </Style>
+
+            <Style TargetType="{x:Type Label}" BasedOn="{StaticResource MetroLabel}">
+                <Setter Property="Margin" Value="2"></Setter>
+                <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            </Style>
+
+            <Style TargetType="{x:Type RichTextBox}" BasedOn="{StaticResource MetroRichTextBox}">
+                <Setter Property="Margin" Value="2"></Setter>
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

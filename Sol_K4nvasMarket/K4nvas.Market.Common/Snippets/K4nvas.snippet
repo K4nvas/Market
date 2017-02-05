@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<CodeSnippets  
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippet Format="1.0.0">  
+        <Header>  
+          <Title>Export View</Title>  
+          <Author>Richard Gómez</Author>  
+          <Description>Enlaza la vista con la interfaz definida para esta.</Description>  
+          <Shortcut>Snippet_ExportView</Shortcut>  
+        </Header>
+        <Snippet>
+          <References>  
+            <Reference>  
+              <Assembly>System.ComponentModel.Composition</Assembly>  
+            </Reference>   
+          </References>  
+          <Imports>
+            <Import>
+              <Namespace>System.ComponentModel.Composition</Namespace>
+            </Import>
+          </Imports>
+          <Declarations>  
+            <Literal>  
+              <ID>InterfazView</ID>  
+              <ToolTip>Interfaz de la Vista.</ToolTip>  
+              <Default>"InterfazView"</Default>  
+            </Literal>  
+          </Declarations>  
+            <Code Language="CSharp">  
+                <![CDATA[[Export(typeof($InterfazView$))]
+						 [PartCreationPolicy(CreationPolicy.NonShared)] ]]>  
+            </Code>  
+        </Snippet>  
+    </CodeSnippet>  
+	
+	 <CodeSnippet Format="1.0.0">  
+        <Header>  
+          <Title>Import ViewModel</Title>  
+          <Author>Richard Gómez</Author>  
+          <Description>Escribe el decorado de exportación del Codebehind de la Vista</Description>  
+          <Shortcut>Snippet_ImportViewModel</Shortcut>  
+        </Header>
+        <Snippet>
+          <References>  
+            <Reference>  
+              <Assembly>System.ComponentModel.Composition</Assembly>  
+            </Reference>   
+          </References>  
+          <Imports>
+            <Import>
+              <Namespace>System.ComponentModel.Composition</Namespace>
+            </Import>
+          </Imports>
+          <Declarations>  
+            <Literal>  
+              <ID>InterfazViewModel</ID>  
+              <ToolTip>Interfaz del ViewModel.</ToolTip>  
+              <Default>"InterfazViewModel"</Default>  
+            </Literal>  
+          </Declarations>  
+            <Code Language="CSharp">  
+                <![CDATA[[Import]
+						 IProductoViewModel ViewModel
+						 {
+						 	get { return DataContext as IProductoViewModel; }
+						 	set { this.DataContext = value; }
+						 } ]]>  
+            </Code>  
+        </Snippet>  
+    </CodeSnippet>  
+</CodeSnippets>  

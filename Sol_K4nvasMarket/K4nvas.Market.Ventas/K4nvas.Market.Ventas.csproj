@@ -76,16 +76,22 @@
     <Compile Include="VentasModule.cs" />
     <Compile Include="ViewModel\Flyout\FlyoutTestViewModel.cs" />
     <Compile Include="ViewModel\Interface\IFlyoutTestViewModel.cs" />
+    <Compile Include="ViewModel\Interface\IMantenimientoProductoViewModel.cs" />
     <Compile Include="ViewModel\Interface\IProductoViewModel.cs" />
     <Compile Include="ViewModel\Interface\ITestViewModel.cs" />
+    <Compile Include="ViewModel\MantenimientoProductoViewModel.cs" />
     <Compile Include="ViewModel\ProductoViewModel.cs" />
     <Compile Include="ViewModel\TestViewModel.cs" />
     <Compile Include="View\Flyout\FlyoutTestView.xaml.cs">
       <DependentUpon>FlyoutTestView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Interface\IFlyoutTestView.cs" />
+    <Compile Include="View\Interface\IMantenimientoProductoView.cs" />
     <Compile Include="View\Interface\IProductoView.cs" />
     <Compile Include="View\Interface\ITestView.cs" />
+    <Compile Include="View\MantenimientoProductoView.xaml.cs">
+      <DependentUpon>MantenimientoProductoView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ProductoView.xaml.cs">
       <DependentUpon>ProductoView.xaml</DependentUpon>
     </Compile>
@@ -95,6 +101,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="View\Flyout\FlyoutTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MantenimientoProductoView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
