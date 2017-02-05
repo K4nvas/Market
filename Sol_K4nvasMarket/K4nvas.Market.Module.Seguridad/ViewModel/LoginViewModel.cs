@@ -3,19 +3,12 @@ using K4nvas.Market.Common.Helpers.ViewActivator;
 using K4nvas.Market.Common.Infraestructure;
 using K4nvas.Market.Module.Seguridad.View.Interface;
 using K4nvas.Market.Module.Seguridad.ViewModel.Interface;
-using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.Mvvm;
 using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.ServiceLocation;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
 
 namespace K4nvas.Market.Module.Seguridad.ViewModel

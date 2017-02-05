@@ -8,7 +8,9 @@
              xmlns:Metro="clr-namespace:MahApps.Metro;assembly=MahApps.Metro" 
              xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" 
              IsModal="True" 
-             Position="Right">
+             Position="Right" 
+             IsOpen="{Binding IsOpenFlyoutMantenimientoProducto}"
+             CloseCommand="{Binding CommandCerrarMantenimientoProducto}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>

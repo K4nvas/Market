@@ -3,15 +3,9 @@ using K4nvas.Market.Shell.View;
 using K4nvas.Market.Shell.View.Interface;
 using Microsoft.Practices.Prism.MefExtensions;
 using Microsoft.Practices.Prism.Regions;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.Composition.Hosting;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.ComponentModel.Composition;
 using K4nvas.Market.Shell.Helper;
 using K4nvas.Market.Ventas;
 
