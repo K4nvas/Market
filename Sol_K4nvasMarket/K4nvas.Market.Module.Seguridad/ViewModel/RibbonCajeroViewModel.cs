@@ -54,7 +54,7 @@ namespace K4nvas.Market.Module.Seguridad.ViewModel
 
         private void ProductoCommand()
         {
-            throw new NotImplementedException();
+            ViewActivator<IProductoView>.Instance.Activate();
         }
 
         private void ReporteCommand()

@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MahApps.Metro">
+      <HintPath>..\K4nvas.Libraries\MahApps.Metro.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\K4nvas.Libraries\Prism\Microsoft.Expression.Interactions.dll</HintPath>
@@ -39,6 +42,9 @@
     </Reference>
     <Reference Include="Microsoft.Practices.Prism.MefExtensions">
       <HintPath>..\K4nvas.Libraries\Prism\Microsoft.Practices.Prism.MefExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm">
+      <HintPath>..\K4nvas.Libraries\Microsoft.Practices.Prism.Mvvm.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.Prism.PubSubEvents">
       <HintPath>..\K4nvas.Libraries\Prism\Microsoft.Practices.Prism.PubSubEvents.dll</HintPath>
@@ -68,14 +74,34 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VentasModule.cs" />
+    <Compile Include="ViewModel\Flyout\FlyoutTestViewModel.cs" />
+    <Compile Include="ViewModel\Interface\IFlyoutTestViewModel.cs" />
+    <Compile Include="ViewModel\Interface\IProductoViewModel.cs" />
     <Compile Include="ViewModel\Interface\ITestViewModel.cs" />
+    <Compile Include="ViewModel\ProductoViewModel.cs" />
     <Compile Include="ViewModel\TestViewModel.cs" />
+    <Compile Include="View\Flyout\FlyoutTestView.xaml.cs">
+      <DependentUpon>FlyoutTestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Interface\IFlyoutTestView.cs" />
+    <Compile Include="View\Interface\IProductoView.cs" />
     <Compile Include="View\Interface\ITestView.cs" />
+    <Compile Include="View\ProductoView.xaml.cs">
+      <DependentUpon>ProductoView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\TestView.xaml.cs">
       <DependentUpon>TestView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="View\Flyout\FlyoutTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ProductoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\TestView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

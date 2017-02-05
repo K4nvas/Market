@@ -17,6 +17,10 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MetroButton }">
+                <Setter Property="Foreground" Value="{DynamicResource AccentColorBrush}" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
