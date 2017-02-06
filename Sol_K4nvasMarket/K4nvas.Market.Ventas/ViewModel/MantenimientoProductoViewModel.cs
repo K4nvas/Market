@@ -1,4 +1,6 @@
-﻿using K4nvas.Market.Ventas.ViewModel.Interface;
+﻿using K4nvas.Market.Proxies.Ventas.ServicioVentas;
+using K4nvas.Market.ServiceController.Ventas;
+using K4nvas.Market.Ventas.ViewModel.Interface;
 using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.Mvvm;
 using System;
@@ -11,10 +13,13 @@ namespace K4nvas.Market.Ventas.ViewModel
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public class MantenimientoProductoViewModel : BindableBase, IMantenimientoProductoViewModel, IDisposable
     {
+        private readonly VentasServiceController oVentasServiceController = new VentasServiceController();
+
         [ImportingConstructor]
         public MantenimientoProductoViewModel()
         {
             IsOpenFlyoutMantenimientoProducto = true;
+            ListaCategoria = oVentasServiceController.ListarCategoriaProducto();
         }
 
         #region Entities
@@ -27,6 +32,23 @@ namespace K4nvas.Market.Ventas.ViewModel
             set { _IsOpenFlyoutMantenimientoProducto = value;
                 OnPropertyChanged(() => IsOpenFlyoutMantenimientoProducto); }
         }
+
+        private ListaCategoria _ListaCategoria;
+
+        public ListaCategoria ListaCategoria
+        {
+            get { return _ListaCategoria; }
+            set { _ListaCategoria = value; OnPropertyChanged(() => ListaCategoria); }
+        }
+
+        private Categoria _CategoriaSeleccionada;
+
+        public Categoria CategoriaSeleccionada
+        {
+            get { return _CategoriaSeleccionada; }
+            set { _CategoriaSeleccionada = value; OnPropertyChanged(() => CategoriaSeleccionada); }
+        }
+
 
 
         #endregion
@@ -45,7 +67,8 @@ namespace K4nvas.Market.Ventas.ViewModel
 
         private void CerrarMantenimientoProductoCommand()
         {
-            throw new NotImplementedException();
+            IsOpenFlyoutMantenimientoProducto = false;
+            Dispose();
         }
 
         public void Dispose()

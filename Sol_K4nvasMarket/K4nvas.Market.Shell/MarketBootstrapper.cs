@@ -8,6 +8,8 @@ using System.Windows;
 using System.Windows.Controls;
 using K4nvas.Market.Shell.Helper;
 using K4nvas.Market.Ventas;
+using System.ComponentModel.Composition;
+using K4nvas.Market.Proxies.Ventas.ServicioVentas;
 
 namespace K4nvas.Market.Shell
 {
@@ -42,6 +44,12 @@ namespace K4nvas.Market.Shell
         protected override void ConfigureContainer()
         {
             base.ConfigureContainer();
+            RegisterServiceTypes();
+        }
+
+        private void RegisterServiceTypes()
+        {
+            this.Container.ComposeExportedValue<IVentasService>(new VentasServiceClient());
         }
     }
 }

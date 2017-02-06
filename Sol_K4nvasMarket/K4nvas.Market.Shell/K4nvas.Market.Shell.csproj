@@ -68,7 +68,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -159,6 +163,14 @@
     <ProjectReference Include="..\K4nvas.Market.Module.Seguridad\K4nvas.Market.Module.Seguridad.csproj">
       <Project>{9f33dd74-e564-449a-8ff7-bcfbdaa16181}</Project>
       <Name>K4nvas.Market.Module.Seguridad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\K4nvas.Market.Proxies\K4nvas.Market.Proxies.csproj">
+      <Project>{149e4a8e-20f4-4b20-97da-ed8d07c5bc9a}</Project>
+      <Name>K4nvas.Market.Proxies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\K4nvas.Market.ServiceController\K4nvas.Market.ServiceController.csproj">
+      <Project>{6ce638a6-09a6-4412-bc15-5e605ce08ae2}</Project>
+      <Name>K4nvas.Market.ServiceController</Name>
     </ProjectReference>
     <ProjectReference Include="..\K4nvas.Market.Ventas\K4nvas.Market.Ventas.csproj">
       <Project>{93AFE21C-D7DF-4C86-A8FB-4D9E2ACAA193}</Project>

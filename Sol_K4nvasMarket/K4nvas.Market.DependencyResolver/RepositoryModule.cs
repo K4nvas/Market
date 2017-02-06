@@ -1,5 +1,7 @@
 ﻿using K4nvas.Market.Repository.Contract.Test;
+using K4nvas.Market.Repository.Contract.Ventas;
 using K4nvas.Market.Repository.Test;
+using K4nvas.Market.Repository.Ventas;
 using Microsoft.Practices.Unity;
 
 namespace K4nvas.Market.DependencyResolver
@@ -9,6 +11,7 @@ namespace K4nvas.Market.DependencyResolver
         public static void RegisterType(IUnityContainer oIUnityContainer)
         {
             oIUnityContainer.RegisterType<ITestRepository, TestRepository>();
+            oIUnityContainer.RegisterType<IVentasRepository, VentasRepository>();
         }
     }
 }

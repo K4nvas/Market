@@ -87,7 +87,7 @@
                     </StackPanel>
                 </Button>
                 
-                <Button Grid.Column="0"  Command="{Binding CommandAbrirPopupRegistrarSerie}">
+                <Button Grid.Column="0"  Command="{Binding CommandNuevoProducto}">
                     <StackPanel Orientation="Horizontal">
                         <Rectangle Width="15" Height="15" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                             <Rectangle.OpacityMask>
@@ -265,6 +265,7 @@
         </Grid>
 
         <!--<Flyout:FlyoutTestView DataContext="{Binding FlyoutTestViewModel}"></Flyout:FlyoutTestView>-->
+        <local:MantenimientoProductoView DataContext="{Binding MantenimientoProductoViewModel}"></local:MantenimientoProductoView>
 
     </Grid>
 </UserControl>

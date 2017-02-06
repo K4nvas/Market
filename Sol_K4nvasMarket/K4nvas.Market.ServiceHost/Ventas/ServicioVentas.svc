@@ -1,0 +1,3 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" 
+    Service="K4nvas.Market.Service.Ventas.VentasService" 
+    Factory="K4nvas.Market.ServiceHost.Factory.UnityServiceHostFactory"    %>

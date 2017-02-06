@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test\ITestDomain.cs" />
+    <Compile Include="Ventas\IVentasDomain.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\K4nvas.Market.Model\K4nvas.Market.Model.csproj">

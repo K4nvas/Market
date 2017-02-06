@@ -117,7 +117,16 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\K4nvas.Market.Proxies\K4nvas.Market.Proxies.csproj">
+      <Project>{149e4a8e-20f4-4b20-97da-ed8d07c5bc9a}</Project>
+      <Name>K4nvas.Market.Proxies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\K4nvas.Market.ServiceController\K4nvas.Market.ServiceController.csproj">
+      <Project>{6CE638A6-09A6-4412-BC15-5E605CE08AE2}</Project>
+      <Name>K4nvas.Market.ServiceController</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
